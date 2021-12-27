@@ -1,0 +1,446 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<title>Draciel Ball</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" sizes="180x180" href="Icons/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="Icons/favicon/site.webmanifest">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+<style>
+  *{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    margin: 0px;
+}
+
+body,h1{
+    font-family: "Lato", sans-serif
+}
+h1 {
+    font-family: "Montserrat", sans-serif
+}
+.fa-anchor,.fa-coffee {
+    font-size:200px
+}
+
+.MainHeading{
+    overflow: hidden;
+    margin: auto;
+    width: auto;
+    padding-bottom: 280px;
+    background: rgb(110,179,225);
+    background: linear-gradient(107deg, rgba(110,179,225,0.9727241238292192) 0%, rgba(174,93,206,0.8886905103838411) 46%, rgba(120,230,231,0.9559174011401436) 98%);
+}
+
+.text2{
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.text1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 45px;
+    text-shadow: 0 0 4px #0DABFB, 0 0 6px #3594FC;
+    color:rgb(0, 0, 0);
+    animation-name: heading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.my-link{
+    text-decoration: none;
+    padding: 2px 20px 2px 20px;
+    background-color: rgb(210, 174, 245);
+    border:rgba(41, 40, 40, 0.651) 2px solid;
+    border-radius: 60px;
+    font-size: 25px;
+    transition: border-radius 0.3s,letter-spacing 0.3s;
+    animation-name: link;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.first-link{
+    margin: auto;
+    width: 8%;
+    margin-top: 40px;
+}
+
+.my-link:hover{
+    background:rgb(194, 173, 243);
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+    color:rgb(91, 169, 241)
+}
+
+.ball{
+    margin: auto;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    top: 80px;
+    left: -186px;
+    background-color: rgb(243, 68, 45);
+    border-radius: 100%;
+    animation-name: ballgame;
+    animation-duration: 4s;    
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.stick1{
+    float: left;
+    position: relative;
+    margin: auto;
+    margin-left: 37%;
+    margin-top: 50px;
+    width: 4px;
+    height: 100px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    animation-name: stick1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.stick2{
+    float: right;
+    position: relative;
+    margin: auto;
+    margin-right: 37%;
+    margin-top: 60px;
+    width: 4px;
+    height: 100px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    animation-name: stick2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes ballgame {
+    0%{top: 80px; left: -186px;}
+    17%{top: 160px; left: 190px;}
+    34%{top: 220px; left: -186px;}
+    51%{top: 290px; left: 190px;}
+    68%{top: 200px; left: -186px;}
+    85%{top: 120px; left: 190px;}
+    100%{top: 80px; left: -186px;}
+}
+
+@keyframes stick1 {
+    0%{top: 0px;}
+    20%{top: 70px;}
+    40%{top: 140px;}
+    60%{top: 200px;}
+    80%{top: 80px;}
+    100%{top: 0px;}
+}
+
+@keyframes stick2 {
+    0%{top: 0px;}
+    20%{top: 80px;}
+    40%{top: 190px;}
+    60%{top: 130px;}
+    80%{top: 50px;}
+    100%{top: 0px;}
+}
+
+@keyframes link {
+    0%{background-color: rgb(221, 119, 252);}
+    25%{background-color: rgb(250, 68, 129);}
+    50%{background-color: rgb(213, 90, 250);}
+    75%{background-color: rgb(157, 71, 255);}
+    100%{background-color: rgb(221, 119, 252);}
+}
+
+#mainpage{
+    margin: auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+    padding: auto;
+}
+
+#mainpage1{
+    background-color: rgba(224, 224, 224, 0.87);
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+input{
+    padding: 10px 15px; 
+}
+
+b{
+    margin: auto;
+    margin-right: 18px;
+    font-size: 20px;
+}
+
+#head1{
+    font-size: 35px;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.Player1{
+    text-align: center;
+}
+
+.Player2{
+    text-align: center;
+}
+
+.score{
+    text-align: center;
+}
+
+.playbutton{
+    padding: 8px 30px;
+    font-size: 20px;
+    border: 2px solid black;
+    color: black;
+    transition: border-radius 0.3s, background-color 0.3s, color 0.3s; 
+    text-decoration: none;
+    margin: auto;  
+}
+
+.playbutton:hover{
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: rgb(37, 37, 37);
+    color:cyan;
+}
+
+@keyframes heading{
+    0%{text-shadow: 0 0 4px #0DABFB, 0 0 6px #3594FC;}
+    50%{text-shadow: 0 0 4px #1754fd, 0 0 6px #752dfa;}
+    100%{text-shadow: 0 0 4px #0DABFB, 0 0 6px #3594FC;}
+}
+
+.submit{
+    margin-top: 10px;
+    float: center;
+}
+
+#SocialMedia{
+    overflow: hidden;
+    background-color: rgba(224, 224, 224, 0.87);
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.left b{
+    float: left;
+    position: relative;
+    margin-left: 200px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+    padding-top: 15px;
+    color: rgb(71, 148, 248);
+}
+
+.right b{
+    float: right;
+    position: relative;
+    margin-right: 200px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+    padding-top: 15px;
+    color: rgb(71, 148, 248);
+}
+
+.Heading{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.Image1{
+    float: left;
+    position: relative;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-left: -230px;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.Image2{
+    position: relative;
+    float: right;
+    margin-top: 50px;
+    margin-right: -210px;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.name1{
+    float: left;
+    position: relative;
+    margin: auto;
+    margin-top: 267px;
+    margin-left: -170px;
+}
+
+.name2{
+    float: right;
+    position: relative;
+    margin: auto;
+    margin-top: 270px;
+    margin-right: -170px;
+}
+
+.linkedin_handle{
+    position: relative;
+    color: #0077b5;
+    font-weight:bolder;
+    text-decoration: none;
+}
+
+.link1{
+    float: left;
+    margin: auto;
+    padding-top: 300px;
+    margin-left: auto;
+    margin-left: -210px;
+    padding-bottom: 20px;
+}
+
+.insta_handle{
+    font-size:17px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: bold;
+}
+
+.linkedin_handle{
+    transition: word-spacing 0.4s;
+}
+
+.linkedin_handle:hover{
+    word-spacing: 6px;
+}
+
+.insta_handle{
+    transition: word-spacing 0.4s;
+}
+
+.insta_handle:hover{
+    word-spacing: 6px;
+}
+
+.link2{
+    float: right;
+    margin: auto;
+    padding-top: 300px;
+    margin-right: auto;
+    margin-right: -210px;
+}
+
+.Heading b{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 4px double rgb(1, 8, 4);
+}
+
+@media screen and (max-width: 700px){
+    nav{
+        flex-direction: column;
+        position: relative;
+    }
+    .flex-align-right{
+        margin-left:0;
+    }
+}
+
+#Game{
+    overflow: hidden;
+    background: rgb(110,179,225);
+    background: linear-gradient(107deg, rgba(110,179,225,0.9727241238292192) 0%, rgba(174,93,206,0.8886905103838411) 46%, rgba(120,230,231,0.9559174011401436) 98%);
+}
+
+
+
+
+
+</style>
+<div class="MainHeading">
+  <h1 class="text1">Draciel Ball</h1>
+  <p class="text2">And with the new normal of quarantine we came with a rousing fun game.<br>This is a common paddle ball game with uncommon and immense intractive ui/ux tried to give you a more virtual real experience.<br>Built using javascript and python.</p>
+  <div class="first-link"><a href="#" class="my-link">Start</a></div>
+
+<div id="upper">
+  <div class="top"> 
+      <div class="stick1">
+  
+      </div>
+      <div class="ball">
+          
+      </div>
+      <div class="stick2">
+  
+      </div>
+  </div>
+</div>
+</div>
+
+
+
+<div id="mainpage1">
+<div align="center" id="mainpage">  
+  <form method="POST" action="{% url 'game' %}">
+    {% csrf_token %}
+    <p id="head1">Welcome To Draciel Ball</p>
+    <div class="Player1"><b>Player 1</b><input name="p1" placeholder="Enter Your Name" required><br><br></div> 
+    <div class="Player2"><b>Player 2</b><input name="p2" placeholder="Enter Your Name" required><br><br></div> 
+    <div class="score"><b>Enter max score</b><input name="score" placeholder="Enter a Number" required><br><br></div>
+    <div class="submit"><input type="submit" class="playbutton" target="_blank"></div>
+  </form>
+</div>
+<hr class="line">
+</div>
+
+
+
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+  
+    <script>
+        $(document).ready(function() {
+            $(document.getElementsByClassName("my-link")).click(function() {
+                $("html, body").animate({
+                    scrollTop: $(
+                      'html, body').get(0).scrollHeight
+                }, 2000);
+            });
+        });
+    </script>
+
+</body>
+</html>
